@@ -2,14 +2,24 @@
 
 .home {
 
+  padding-top: @nav-height;
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
       padding:0 15px;
+    }
+
+    .signup-header{
+      width: 100%;
+    }
+
+    @media @phone{
+      img{
+        width: 100%;
+      }
     }
   
   }
@@ -24,6 +34,14 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone{
+      .sky, .launch{
+        display: none;
+      }
+      img{
+        width: 100%;
+      }
     }
   }
 
@@ -43,9 +61,7 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-
+    .set-flex(row,center,stretch);
     .walk-text {
       width: 50%;
 
@@ -58,7 +74,16 @@
       }
 
       .btn {
+        .custom-button(30px,90px, black, white);
       }
+      @media @phone{
+        width: 100%;
+        .btn{
+          width: 100%;
+          height: 50px;
+        }
+      }
+      
     }
 
     .walk-img {
@@ -70,6 +95,63 @@
         height: auto;
         border-radius: 10px;
       }
+
+      @media @phone{
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+
+    @media @phone{
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 15px;
     }
   }
+
+  .form {
+    width: 50%;
+    form{
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      label{
+        font-size: 2rem;
+        
+      }
+      input,textarea{
+        margin: 10px 0;
+        width: 100%;
+      }
+
+      input{
+        height: 30px;
+        border-radius: 10px;
+        // b;
+      }
+      textarea{
+        resize: none;
+        height: 200px;
+      }
+      li{
+        input{
+          .custom-button(30px,90px, black, white);
+          border: none;
+          @media @phone{
+            font-size: 2rem;
+            width: 100%;
+          }
+        }
+      }
+      
+    }
+    @media @phone{
+      width: 100%;
+      form{
+        
+        padding: 0 10px;
+      }
+    }
+  } 
+
 }// home
