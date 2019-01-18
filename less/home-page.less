@@ -4,13 +4,16 @@
 
   padding-top: @nav-height;
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
       padding:0 15px;
+    }
+
+    .signup-header{
+      width: 100%;
     }
 
     @media @phone{
@@ -105,5 +108,50 @@
       padding: 15px;
     }
   }
+
+  .form {
+    width: 50%;
+    form{
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      label{
+        font-size: 2rem;
+        
+      }
+      input,textarea{
+        margin: 10px 0;
+        width: 100%;
+      }
+
+      input{
+        height: 30px;
+        border-radius: 10px;
+        // b;
+      }
+      textarea{
+        resize: none;
+        height: 200px;
+      }
+      li{
+        input{
+          .custom-button(30px,90px, black, white);
+          border: none;
+          @media @phone{
+            font-size: 2rem;
+            width: 100%;
+          }
+        }
+      }
+      
+    }
+    @media @phone{
+      width: 100%;
+      form{
+        
+        padding: 0 10px;
+      }
+    }
+  } 
 
 }// home

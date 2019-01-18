@@ -158,6 +158,10 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 .container {
   max-width: 800px;
   width: 100%;
@@ -190,12 +194,11 @@ p {
   margin: 0 auto;
 }
 .nav-container nav a {
-  text-decoration: none;
   color: black;
 }
 .nav-container nav a:hover {
   border-left: 2px solid #23293B;
-  transition-duration: 300ms;
+  transition-duration: 100ms;
 }
 @media (max-width: 500px) {
   .nav-container,
@@ -221,6 +224,9 @@ footer {
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro .signup-header {
+  width: 100%;
 }
 @media (max-width: 500px) {
   .home .intro img {
@@ -287,8 +293,10 @@ footer {
 }
 .home .walk .walk-text .btn:hover {
   background-color: white;
-  color: black;
   border: 2px solid black;
+}
+.home .walk .walk-text .btn:hover a {
+  color: black;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text {
@@ -319,5 +327,62 @@ footer {
     flex-direction: column-reverse;
     width: 100%;
     padding: 15px;
+  }
+}
+.home .form {
+  width: 50%;
+}
+.home .form form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.home .form form label {
+  font-size: 2rem;
+}
+.home .form form input,
+.home .form form textarea {
+  margin: 10px 0;
+  width: 100%;
+}
+.home .form form input {
+  height: 30px;
+  border-radius: 10px;
+}
+.home .form form textarea {
+  resize: none;
+  height: 200px;
+}
+.home .form form li input {
+  height: 30px;
+  width: 90px;
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.home .form form li input:hover {
+  background-color: white;
+  border: 2px solid black;
+}
+.home .form form li input:hover a {
+  color: black;
+}
+@media (max-width: 500px) {
+  .home .form form li input {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .form {
+    width: 100%;
+  }
+  .home .form form {
+    padding: 0 10px;
   }
 }
