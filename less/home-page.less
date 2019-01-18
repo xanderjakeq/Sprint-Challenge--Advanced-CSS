@@ -11,6 +11,12 @@
     p {
       padding:0 15px;
     }
+
+    @media @phone{
+      img{
+        width: 100%;
+      }
+    }
   
   }
 
@@ -24,6 +30,14 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone{
+      .sky, .launch{
+        display: none;
+      }
+      img{
+        width: 100%;
+      }
     }
   }
 
@@ -43,9 +57,7 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-
+    .set-flex(row,center,stretch);
     .walk-text {
       width: 50%;
 
@@ -60,6 +72,14 @@
       .btn {
         .custom-button(30px,90px, black, white);
       }
+      @media @phone{
+        width: 100%;
+        .btn{
+          width: 100%;
+          height: 50px;
+        }
+      }
+      
     }
 
     .walk-img {
@@ -71,6 +91,18 @@
         height: auto;
         border-radius: 10px;
       }
+
+      @media @phone{
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+
+    @media @phone{
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 15px;
     }
   }
+
 }// home
