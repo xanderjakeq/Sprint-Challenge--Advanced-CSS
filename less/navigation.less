@@ -26,13 +26,13 @@
         a{
             text-decoration: none;
             color: black;
-        }
-        @media @phone{
-            justify-content: space-evenly;
+            .show-bottom-border;
         }
     }
 
     @media @phone{
-        width: 100%;
+        &,& nav{
+            width: 100%;
+        }
     }
 }

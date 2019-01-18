@@ -193,13 +193,13 @@ p {
   text-decoration: none;
   color: black;
 }
-@media (max-width: 500px) {
-  .nav-container nav {
-    justify-content: space-evenly;
-  }
+.nav-container nav a:hover {
+  border-left: 2px solid #23293B;
+  transition-duration: 300ms;
 }
 @media (max-width: 500px) {
-  .nav-container {
+  .nav-container,
+  .nav-container nav {
     width: 100%;
   }
 }
